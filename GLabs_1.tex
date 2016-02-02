@@ -12,8 +12,15 @@
 \usepackage{graphicx}
 \usepackage{caption}
 \usepackage{subcaption}
-\usepackage{listings}
+\usepackage{verbatim}
 \usepackage{url} 
+\usepackage{listings}
+\usepackage{multicol}
+\lstdefinestyle{mystyle}{
+  basicstyle=\tiny,
+  language=Python
+}
+\lstset{style=mystyle}
 
 %% Automatizar localización de las imágenes
 \graphicspath{{./img/}}
@@ -34,6 +41,8 @@
   \tableofcontents
 \end{frame}
 
-\input{python.tex}
+\input{python.tex}              % introducción a python
+\input{cvs.tex}                 % uso de git
+% \input{github.tex}              % coñecendo github
 
 \end{document}
