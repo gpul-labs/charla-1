@@ -1,5 +1,5 @@
 
-# Ejemplo de implementación de una pila
+# Ejemplo de implementacion de una pila
 
 
 def crear():
@@ -26,6 +26,6 @@ def cima(s):
 
 def vacia(s):
     if len(s):
-        return True
-    else:
         return False
+    else:
+        return True
