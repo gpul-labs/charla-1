@@ -14,8 +14,10 @@
 \usepackage{subcaption}
 \usepackage{verbatim}
 \usepackage{url} 
+\usepackage[export]{adjustbox}
 \usepackage{listings}
 \usepackage{tcolorbox}
+\usepackage{tikz}
 \usepackage{cclicenses}
 \usepackage{multicol}
 \lstdefinestyle{mystyle}{
@@ -36,7 +38,6 @@
 
 \begin{frame}
   \titlepage
-
   \begin{tcolorbox}[colback=blue!5,colframe=blue!40!black,title=Licencia]
     \centering
     {\small \byncsa}\\
@@ -51,6 +52,12 @@
   \frametitle{Índice}
   \tableofcontents
 \end{frame}
+
+\usebackgroundtemplate{%
+  \tikz[overlay,remember picture] 
+  \node[opacity=0.3 , at=(current page.south east),anchor=south east] {
+    \includegraphics[]{logo-labs}};
+}
 
 \input{python.tex}              % introducción a python
 \input{cvs.tex}                 % uso de git
