@@ -36,8 +36,7 @@ A documentación dispoñible para o seguimento da charla é o seguinte:
 - **Transparecias**: Diapositivas empregadas durante a charla para un mellor
     seguimento da mesma.
 - Códigos de exemplo:(aínda sen definir)
-   - Un programa principal que faga uso dos modulos desenvolvidos durante a
-       charla.
-   - Un programa que empregue orientación a obxectos e uso das estructuras de
-       datos impartidos na charla
-   - Un programa que use lectura/escritura de arquivos de texto plano.
+   - Implementación de unha pila con listas en paradigma imperativo.
+   - Implementación de unha pila facendo uso de orientación a obxectos
+   - Módulo de implementación de diferentes métodos de ordenación.
+   - Implementación do algoritmo de cifrado de Vigenère.
