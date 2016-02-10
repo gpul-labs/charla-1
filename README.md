@@ -32,8 +32,8 @@ A charla tratará os seguintes puntos:
 ## Documentación
  
 A documentación dispoñible para o seguimento da charla é o seguinte:
-
-- **Transparecias**: Diapositivas empregadas durante a charla para un mellor
+- Enlace para a máquina virtual de Ubuntu: https://mega.nz/#!9sRzRaxT
+- **Transparencias**: Diapositivas empregadas durante a charla para un mellor
     seguimento da mesma.
 - Códigos de exemplo:(aínda sen definir)
    - Implementación de unha pila con listas en paradigma imperativo.
