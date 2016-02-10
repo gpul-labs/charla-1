@@ -38,7 +38,7 @@ def parse_options(argv):
     options = {'input_file': '', 'output_file': 'cyphertext.txt'}
     try:
         opts, args = getopt(argv, 'dehi:o:k:', ['input', 'output',
-                                               'help', 'key'])
+                                                'help', 'key'])
     except GetoptError:
         print('Invalid Argument\nWrite --help for usage information')
         usage()
@@ -126,9 +126,9 @@ def main(argv):
     if(len(argv) < 6):
         print 'Numero de parametros insuficiente'
         usage()
-    if(options['operation'] == '-e'):
+    if options['operation'] == '-e':
         encrypt_text(options)
-    elif(options['operation'] == '-d'):
+    elif options['operation'] == '-d':
         decrypt_text(options)
     else:
         invalid_argument(options['operation'])
