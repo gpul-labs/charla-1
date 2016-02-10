@@ -36,6 +36,25 @@
 \end{frame}
 
 \begin{frame}[fragile]
+  \frametitle{Octavo comando: git clone}
+  \begin{box}{git clone}
+    O comando git clone serve para clonar un repositorio remoto a local, executando tres pasos nun solo: git init, git remote add e git pull.
+  \end{box}
+  Coñecendo este comando, poderíamos executar cunha sola sentenza o clonado de
+  repositorio da seguinte forma: \textbf{git clone
+    https://github.com/BreixoCF/charlagit.git}.
+\begin{verbatim}
+~ % git clone https://github.com/BreixoCF/charlagit.git
+Cloning into 'charlagit'...
+remote: Counting objects: 16, done.
+remote: Compressing objects: 100% (9/9), done.
+remote: Total 16 (delta 3), reused 16 (delta 3), pack-reused 0
+Unpacking objects: 100% (16/16), done.
+Checking connectivity... done.
+\end{verbatim}
+\begin{frame}
+
+\begin{frame}[fragile]
   \scriptsize
   Agora copiaremos este código dunha pila en Python nun ficheiro que chamaremos \textbf{stack.py}:
   \tiny
@@ -75,7 +94,7 @@
 \end{frame}
 
 \begin{frame}[fragile]
-  \frametitle{Octavo comando: git push}
+  \frametitle{Noveno comando: git push}
   \begin{block}{git push}
     Este comando serve para subir os cambios do repositorio local (HEAD) ao repositorio remoto.
   \end{block}
@@ -102,7 +121,7 @@
 \end{frame}
 
 \begin{frame}[fragile]
-  \frametitle{Noveno comando: git fetch}
+  \frametitle{Décimo comando: git fetch}
   \begin{block}{git fetch}
     Este comando serve para actualizar o repositorio local respecto o repositorio remoto indicado.
   \end{block}
@@ -117,7 +136,7 @@
 
 
 \begin{frame}[fragile]
-  \frametitle{Décimo comando: git pull}
+  \frametitle{Undécimo comando: git pull}
   \begin{block}{git pull}
     Este comando serve para descargar o commit máis novo do repositorio remoto á nosa zona de traballo (workspace).
   \end{block}
