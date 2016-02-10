@@ -3,7 +3,7 @@ from random import randint
 
 
 def generate_random_list(a, b):
-    """Genera una lista de 'a' enteros entre 0 y 'b'  """
+    """Xenera unha lista de 'a' enteiros entre 0 e 'b'  """
     l = []
     for ent in range(0, a):
         l.append(randint(0, b))
@@ -11,7 +11,7 @@ def generate_random_list(a, b):
 
 
 def verify_sort(l):
-    """Verifica si una lista está ordenada """
+    """Verifica si unha lista está ordenada """
     for i in range(0, len(l)-1):
         if l[i] > l[i+1]:
             return False
