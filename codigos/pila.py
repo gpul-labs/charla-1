@@ -1,5 +1,5 @@
 
-# Ejemplo de implementacion de una pila
+# Exemplo de implementacion de una pila
 
 
 def crear():
