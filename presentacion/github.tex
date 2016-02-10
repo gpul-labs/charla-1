@@ -14,6 +14,22 @@
 \end{frame}
 
 \begin{frame}[fragile]
+  Existen varios repositorios remotos, como poden ser \textbf{Bitbucket de Atlassian},
+  \textbf{GitLab de GitLab Inc.}, ... Pero o máis extendido e o que conta coa maior
+  comunidade é GitHub. GitHub conta con milleiros de proxectos, dende o código
+  que estamos a subir nós agora ata o código fonte do kernel de Linux.
+  \begin{multicols}{2}
+    \begin{figure}
+      \includegraphics[scale=0.4]{bitbucket}
+    \end{figure}
+    \columnbreak
+    \begin{figure}
+      \includegraphics[scale=0.4]{gitlab}
+    \end{figure}
+  \end{multicols}
+\end{frame}
+
+\begin{frame}[fragile]
   \frametitle{Repositorio remoto}
   \scriptsize
   Para crear o noso repositorio remoto, antes crearemos unha conta en GitHub. Logo de rexistrarnos, creamos un repositorio novo (New repository). Logo de indicarlle o nome, seguiremos os pasos que nos indican. Como xa temos o noso repositorio creado, con commits xa feitos sobre ficheiros, simplemente executaremos \textbf{git remote add origin https://github.com/BreixoCF/charlagit.git} e posteriormente faremos \textbf{git push -u origin master}.
@@ -37,9 +53,9 @@
 
 \begin{frame}[fragile]
   \frametitle{Octavo comando: git clone}
-  \begin{box}{git clone}
+  \begin{block}{git clone}
     O comando git clone serve para clonar un repositorio remoto a local, executando tres pasos nun solo: git init, git remote add e git pull.
-  \end{box}
+  \end{block}
   Coñecendo este comando, poderíamos executar cunha sola sentenza o clonado de
   repositorio da seguinte forma: \textbf{git clone
     https://github.com/BreixoCF/charlagit.git}.
@@ -52,7 +68,7 @@ remote: Total 16 (delta 3), reused 16 (delta 3), pack-reused 0
 Unpacking objects: 100% (16/16), done.
 Checking connectivity... done.
 \end{verbatim}
-\begin{frame}
+\end{frame}
 
 \begin{frame}[fragile]
   \scriptsize
