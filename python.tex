@@ -35,16 +35,14 @@
     {\color{blue}\url{http://www.learnpython.org/es/}}
   \item Tracducción do manual de Guido van Rossum
     {\color{blue}\url{http://docs.python.org.ar/tutorial/pdfs/TutorialPython2.pdf}}
-  \item Información adiccional\\
-    {\color{blue}\url{s.wikipedia.org/wiki/Python}}
   \end{itemize}
 \end{frame}
 
-\subsection{Introducción}
-\label{subsec:Introduccion}
+\subsection{Introdución}
+\label{subsec:Introducion}
 
 \begin{frame}
-  \frametitle{Introducción}
+  \frametitle{Introdución}
   \begin{itemize}
   \item Historia
   \item Para qué é usado.
@@ -136,7 +134,7 @@
   o que nos permite programar en tempo real e comprobar a sintaxis do noso
   programa.
   
-  Neste modo podemos cargar librerías e módulos, ee executar funcións de forma
+  Neste modo podemos cargar librerías e módulos, e executar funcións de forma
   rápida sen necesidade de realizar programas previamente.
 \end{frame}
 
@@ -177,7 +175,7 @@ Type "help", "copyright", "credits" or "license" for more information.
   \item Números complexos (complex)
   \item Caracteres (char)
   \item Cadeas de caracteres (string)
-  \item tuplas (tuple)
+  \item Tuplas (tuple)
   \end{itemize}
 \end{frame}
 
@@ -206,11 +204,11 @@ Type "help", "copyright", "credits" or "license" for more information.
 
 \begin{frame}
   \frametitle{Estructuras de datos}
-  Ademais dos tipos de datos básicos, Python soporta de forma nativa varias
+  Ademáis dos tipos de datos básicos, Python soporta de forma nativa varias
   estructuras de datos, das cales veremos as dúas máis empregadas.
   \begin{itemize}
   \item \textbf{Listas}\\
-    Conxunto de tipos básicos(enteiros, numeros en punto flotante) ou
+    Conxunto de tipos básicos(enteiros, números en punto flotante) ou
     compostos(tuplas), poden estar ordenados ou non.\\
     a = [1,2,3,4]
   \item \textbf{Diccionarios}\\
@@ -224,7 +222,7 @@ Type "help", "copyright", "credits" or "license" for more information.
   \frametitle{Definir variables}
   O intérprete python ten incorporado un motor de inferencia, o que significa
   que cando declaramos unha variable non temos que declarar o seu tipo, xa se
-  encarga o propio intérprete de inferilo. Se temos dudas acerca do typo de unha
+  encarga o propio intérprete de inferilo. Se temos dúbidas acerca do tipo de unha
   variable, podemos sabelo coa función \emph{type()}
   \small
 \begin{verbatim}
@@ -240,9 +238,10 @@ Type "help", "copyright", "credits" or "license" for more information.
 
 \begin{frame}[fragile]
   \frametitle{Funcións incorporadas (Built-in functions)}
-  Python fai uso ten librerías por defecto, que non é necesario cargar, que
-  proveen funcionalidades básicas, coma \emph{print()}, que aplicado sobre un
-  tipo devolve a súa representación en caracteres.
+  Python fai uso de librerías por defecto, que non é necesario cargar, que
+  proveen funcionalidades básicas, coma \emph{type}, que dado unha variable
+  devolve o seu tipo ou \emph{print} que mostra por saída estándar o argumento
+  pasado. 
   \small
 \begin{verbatim}
 >>> n = "cadea"
@@ -264,7 +263,8 @@ cadea
   xa que son un tipo moi empregado.
   \begin{itemize}
   \item Declaración\\
-    d1 = {}
+    d1 = \{\} \# Diccionario valeiro\\
+    d2 = {'Xoan':22, 'Beatriz':18, 'Anxo':20}
   \item Obter un elemento\\
     d1['clave']
   \item Engadir un elemento\\
@@ -280,7 +280,8 @@ cadea
   operacións sobre estas son amplamente soportadas.
   \begin{itemize}
   \item Declaración\\
-    l = []
+    l = [] \# Lista valeira\\
+    l = [3, 12, 15, 16]
   \item Obter un elemento por índice (comeza por 0)\\
     l[7]
   \item Engadir un elemento o final da lista\\
@@ -301,10 +302,7 @@ def <nome_funcion>(parametro1,parametro2,...,parametroN):
    sentencias dentro da función
 \end{verbatim}  
   \normalsize
-\end{frame}
-
-\begin{frame}[fragile]
-  \frametitle{Función de suma}
+  Coma por exemplo esta función de suma
   \small
 \begin{verbatim}
 >>> def suma(a,b):
@@ -313,6 +311,7 @@ def <nome_funcion>(parametro1,parametro2,...,parametroN):
 >>> suma(3,4)
 7
 \end{verbatim}
+  \normalsize
 \end{frame}
 
 \begin{frame}[fragile]
@@ -342,6 +341,7 @@ def <nome_funcion>(parametro1,parametro2,...,parametroN):
         grant_access()
     \end{lstlisting}
   \end{multicols}
+  No exemplo da dereita o acceso é otorgado a pesar de fallar a autenticación.
 \end{frame}
 
 \begin{frame}[fragile]
@@ -349,12 +349,12 @@ def <nome_funcion>(parametro1,parametro2,...,parametroN):
   \framesubtitle{If}
   \small
   \begin{verbatim}
-    if (test1):
+    if test1:
        print a
-    elif (test2 and test3):
+    elif test2 and test3:
        print b
        exit()
-    elif (test4):
+    elif test4:
        print(``nada que facer'')
     else:
        print(``Saindo'')
@@ -407,19 +407,20 @@ Bea
   \frametitle{Estructuras de control}
   \framesubtitle{Bucle while}
   Igual que no resto de linguaxes de programación, o bucle while permítenos
-  realizar unha acción repetitiva mentrs se cumpla unha condición, usando a a
+  realizar unha acción repetitiva mentras se cumpla unha condición, usando a
   sentencia \textbf{break} para saír. Se non queremos saír do bucle, senón
   saltar as sentencias pendentes e executar o seguinte salto de bucle usamos
   \textbf{continue}.
   \small
 \begin{verbatim}
-    while(true):
-       if(test1):
+    while True:
+       if test1:
           continue
-       elif(test2):
-          print("Hola")
+       elif test2:
+          print ("Hola")
+          break
        else:
-          break    
+          ...    
 \end{verbatim}
   \normalsize
 \end{frame}
@@ -461,7 +462,7 @@ Bea
         return a-b
 
     def devolve_maior (a,b):
-        if (a>b):
+        if a>b:
             return a
         else:
             return b
@@ -471,11 +472,12 @@ Bea
 
 \begin{frame}[fragile]
   \frametitle{import}
-  A sentencia \textbf{import} carga todas as funcións do módulo ó que
-  referenciamos, o cal pode ser ineficiente se non as empregamos.
-
-  Ademáis, o programador debe especificar o espazo de nomes, é decir,
-  referenciar o módulo ó que pertence a función que queremos empregar.
+  A sentencia \textbf{import} comproba se nun módulo existe o ficheiro
+  \textbf{init.py}, que contén unha variable \emph{all} que define as funcións
+  que deben ser importadas cando o método é chamado. Ademáis, engade un novo
+  espacio de nomes, no que son definidas as funcións e variables do
+  módulo. Debido a esto o programador debe especificar o espazo de nomes antes
+  de chamar á función a empregar.
 
   \small
   \begin{verbatim}
@@ -492,9 +494,9 @@ NameError: name 'suma' is not defined
 
 \begin{frame}[fragile]
   \frametitle{from}
-  Mediante a orde \textbf{from}, podemos importar funcións concretas de un
-  módulo e, ademáis, importar o seu espazo de nomes, polo que non é necesario
-  facer referencia ó módulo ó que pertence.
+  Mediante a orde \textbf{from}, podemos importar funcións concretas ó noso
+  espacio de nomes, polo que para usala non é necesario especificar un espacio
+  de nomes.
   \small
   \begin{verbatim}
 >>> from operacions import devolve_maior
