@@ -20,11 +20,11 @@
   que estamos a subir nós agora ata o código fonte do kernel de Linux.
   \begin{multicols}{2}
     \begin{figure}
-      \includegraphics[scale=0.4]{bitbucket}
+      \includegraphics[scale=0.1]{bitbucket}
     \end{figure}
     \columnbreak
     \begin{figure}
-      \includegraphics[scale=0.4]{gitlab}
+      \includegraphics[scale=0.1]{gitlab}
     \end{figure}
   \end{multicols}
 \end{frame}
@@ -59,15 +59,16 @@
   Coñecendo este comando, poderíamos executar cunha sola sentenza o clonado de
   repositorio da seguinte forma: \textbf{git clone
     https://github.com/BreixoCF/charlagit.git}.
-\begin{verbatim}
-~ % git clone https://github.com/BreixoCF/charlagit.git
-Cloning into 'charlagit'...
-remote: Counting objects: 16, done.
-remote: Compressing objects: 100% (9/9), done.
-remote: Total 16 (delta 3), reused 16 (delta 3), pack-reused 0
-Unpacking objects: 100% (16/16), done.
-Checking connectivity... done.
-\end{verbatim}
+    \tiny
+	\begin{verbatim}
+	~ % git clone https://github.com/BreixoCF/charlagit.git
+	Cloning into 'charlagit'...
+	remote: Counting objects: 16, done.
+	remote: Compressing objects: 100% (9/9), done.
+	remote: Total 16 (delta 3), reused 16 (delta 3), pack-reused 0
+	Unpacking objects: 100% (16/16), done.
+	Checking connectivity... done.
+	\end{verbatim}
 \end{frame}
 
 \begin{frame}[fragile]
@@ -99,13 +100,22 @@ Checking connectivity... done.
 \end{verbatim}
 \end{frame}
 
-\begin{frame}
+\begin{frame}[fragile]
   \normalsize
-  Agora imos a subir o ficheiro ao repositorio de \textbf{GitHub} que acabamos de crear. Para eso, engadimos o ficheiro \textit{stack.py} á zona de preparación (Index) e posteriormente ao repositorio local (HEAD).\\
-  \vspace{2cm}
+  Agora imos a subir o ficheiro ao repositorio de \textbf{GitHub} que acabamos de crear. Para eso, engadimos o ficheiro \textit{stack.py} á zona de preparación (Index) e posteriormente ao repositorio local (HEAD).
+  \tiny 
+  	\begin{verbatim}
+  		breixocf@BreixoCF ~/Desktop/CharlaGit 21 $ git add stack.py 
+  		breixocf@BreixoCF ~/Desktop/CharlaGit 22 $ git commit -m "Engadida a pila OO stack.py"
+  		[master 111365e] Engadida a pila OO stack.py
+  		 1 file changed, 21 insertions(+)
+  		 create mode 100644 stack.py
+  	\end{verbatim}
   \large
   \begin{center}
-    \textbf{¿Xa estaría subido ao repositorio remoto?}
+    \textbf{¿Xa estaría subido ao repositorio remoto?}\\
+    \vspace{1cm}
+    \textbf{\Huge NON}
   \end{center}
 \end{frame}
 
@@ -117,23 +127,23 @@ Checking connectivity... done.
   \scriptsize
   Se executamos \textbf{git push origin master}, podremos comprobar na web de github que o ficheiro está engadido correctamente.
   \tiny 
-\begin{verbatim}
-	breixocf@BreixoCF ~/Desktop/CharlaGit 21 $ git add stack.py 
-	breixocf@BreixoCF ~/Desktop/CharlaGit 22 $ git commit -m "Engadida a pila OO stack.py"
-	[master 111365e] Engadida a pila OO stack.py
-	 1 file changed, 21 insertions(+)
-	 create mode 100644 stack.py
-	breixocf@BreixoCF ~/Desktop/CharlaGit 23 $ git push origin master 
-	Username for 'https://github.com': breixocf
-	Password for 'https://breixocf@github.com': 
-	Counting objects: 4, done.
-	Delta compression using up to 4 threads.
-	Compressing objects: 100% (3/3), done.
-	Writing objects: 100% (3/3), 489 bytes | 0 bytes/s, done.
-	Total 3 (delta 1), reused 0 (delta 0)
-	To https://github.com/BreixoCF/charlagit.git
-	   621a67b..111365e  master -> master
-\end{verbatim}
+	\begin{verbatim}
+		breixocf@BreixoCF ~/Desktop/CharlaGit 21 $ git add stack.py 
+		breixocf@BreixoCF ~/Desktop/CharlaGit 22 $ git commit -m "Engadida a pila OO stack.py"
+		[master 111365e] Engadida a pila OO stack.py
+		 1 file changed, 21 insertions(+)
+		 create mode 100644 stack.py
+		breixocf@BreixoCF ~/Desktop/CharlaGit 23 $ git push origin master 
+		Username for 'https://github.com': breixocf
+		Password for 'https://breixocf@github.com': 
+		Counting objects: 4, done.
+		Delta compression using up to 4 threads.
+		Compressing objects: 100% (3/3), done.
+		Writing objects: 100% (3/3), 489 bytes | 0 bytes/s, done.
+		Total 3 (delta 1), reused 0 (delta 0)
+		To https://github.com/BreixoCF/charlagit.git
+		   621a67b..111365e  master -> master
+	\end{verbatim}
 \end{frame}
 
 \begin{frame}[fragile]
@@ -141,12 +151,13 @@ Checking connectivity... done.
   \begin{block}{git fetch}
     Este comando serve para actualizar o repositorio local respecto o repositorio remoto indicado.
   \end{block}
-  \scriptsize
+  \tiny
 \begin{verbatim}
 	breixocf@BreixoCF ~/Desktop/CharlaGit 27 $ git fetch origin master
 	From https://github.com/BreixoCF/charlagit
 	 * branch            master     -> FETCH_HEAD
 \end{verbatim}
+	\normalsize
   Como non hai cambios nos ficheiros non pasaría nada.
 \end{frame}
 
@@ -159,13 +170,20 @@ Checking connectivity... done.
   \scriptsize
   Se estivéramos dous ou máis usuarios traballando sobre o mismo repositorio remoto, poderíamos descargarnos os cambios que fixo o outro usuario executando \textbf{git pull origin master}.
   \tiny 
-\begin{verbatim}
+	\begin{verbatim}
 	breixocf@BreixoCF ~/Desktop/CharlaGit 24 $ git pull origin master 
 	From https://github.com/BreixoCF/charlagit
-	 * branch            master     -> FETCH_HEAD
+ 	* branch            master     -> FETCH_HEAD
 	Already up-to-date.
-\end{verbatim}
+	\end{verbatim}
+	\normalsize
   Como non hai cambios nos ficheiros non pasaría nada.
 \end{frame}
 
+\begin{frame}
+\Huge
+	\begin{center}
+	Ata aquí por hoxe, pero para a semana máis e mellor!!
+	\end{center}
+\end{frame}
 
