@@ -32,7 +32,7 @@ A charla tratará os seguintes puntos:
 ## Documentación
  
 A documentación dispoñible para o seguimento da charla é o seguinte:
-- Enlace para a máquina virtual de Ubuntu: https://mega.nz/#!9sRzRaxT
+- Enlace para a máquina virtual de Ubuntu: https://mega.nz/#!9sRzRaxT!cmT0wEdK0JE8kM2EvdKIDjEFvDBLUa5fZHiyOrVlLD0
 - **Transparencias**: Diapositivas empregadas durante a charla para un mellor
     seguimento da mesma.
 - Códigos de exemplo:(aínda sen definir)
